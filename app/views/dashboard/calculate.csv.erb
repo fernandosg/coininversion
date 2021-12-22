@@ -1,0 +1,18 @@
+<%=
+  CSV.generate do |csv|
+    encabezado = []
+
+    encabezado << 'BTC'
+    encabezado << 'ETH'
+
+    csv << encabezado
+
+    @data[:total_months].times do |month_count|
+      fila = []
+      fila << @data[:increment_by_month]['ETH'][month_count]
+      fila << @data[:increment_by_month]['BTC'][month_count]
+
+      csv << fila
+    end
+  end.html_safe
+-%>

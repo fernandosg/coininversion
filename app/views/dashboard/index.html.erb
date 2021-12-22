@@ -1,0 +1,18 @@
+<h2>Calculadora de inversión</h2>
+<form  data-controller="coincalculator" action="<%= dashboard_calculate_path %>" method="get" data-remote="true">
+  <div class="col-md-12">
+    <input type='number' data-target="coincalculator.inversion" name="inversion" step='0.01' value='0.00' placeholder='0.00' />
+    <button class="btn btn-primary">Calcular</button>
+  </div>
+  <div id="container-download" style="display: none" class="col-md-12">
+		<h3>Exportar a</h3>
+		<input type="hidden" data-target="coincalculator.url" value="<%= dashboard_calculate_path %>">
+		<select data-target="coincalculator.type">
+			<option value="csv">CSV</option>
+			<option value="json">JSON</option>
+		</select>
+		<button class="btn btn-secondary" data-action="click->coincalculator#downloadFile">Descargar</button>
+	</div>
+  <div id="container_information"></div>
+</div>	
+</form>

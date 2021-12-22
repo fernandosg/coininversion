@@ -1,0 +1,35 @@
+<div class="col-md-12">
+  <div class="col-md-6">
+    <b>Precios:</b>
+    <p>
+      <b>BTC: <%= @data[:prices]['BTC'] %> / ETH: <%= @data[:prices]['ETH'] %></b>
+    </p>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>INVERSION</td>
+      <td><%= params[:inversion] %> USD</td>
+    </tr>
+    <tr>
+      <td>BTC</td>
+      <td>ETH</td>
+    </tr>
+    <% if @data[:increment_by_month]['BTC'] %>
+      <% total_months = @data[:increment_by_month]['BTC'].length %>
+      <% total_months.times do |month_count| %>
+      <tr>
+        <td><%= @data[:increment_by_month]['BTC'][month_count] %></td>
+        <% if @data[:increment_by_month]['ETH'] %>
+          <td><%= @data[:increment_by_month]['ETH'][month_count] %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

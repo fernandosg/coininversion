@@ -1,0 +1,22 @@
+{
+  "name": "coininversion",
+  "private": true,
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/turbo-rails": "^7.1.0",
+    "@popperjs/core": "^2.11.0",
+    "@rails/actioncable": "^6.0.0-alpha",
+    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/request.js": "^0.0.6",
+    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/webpacker": "4.3.0",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "stimulus": "^3.0.1",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^4.7.0"
+  }
+}

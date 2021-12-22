@@ -1,0 +1,6 @@
+$('#container_information').html('<%= j render "table_information" %>')
+<% if @data[:increment_by_month]['BTC'] || @data[:increment_by_month]['BTC'] %> 
+$('#container-download').show()
+<% else %>
+$('#container-download').hide()
+<% end %>
