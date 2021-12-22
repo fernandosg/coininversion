@@ -19,7 +19,7 @@ yarn install
 
 Para poder hacer uso de la aplicación se necesita agregar el API key de Coinmarketcap, tanto para el ambiente de desarrollo como el de pruebas.
 
-En el archivo development.rb y el archivo test.rb agrega la variable de entornoCOINMARKET_KEY
+En el archivo development.rb y el archivo test.rb agrega la variable de entorno COINMARKET_KEY
 
 ```ruby
 ENV['COINMARKET_KEY'] = 'APIKEY'
