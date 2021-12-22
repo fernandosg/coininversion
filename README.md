@@ -1,24 +1,26 @@
-# README
+# Coininversion
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este es un pequeño ejercicio para manejar la API de Coinbase y mostrar
+las ganancias de inversión tomando como referencia un 5% de interés
+para la moneda bitcoin y un 3% de ETH
 
-Things you may want to cover:
+## Instalación
+Ejecuta las gemas del proyecto en un gemset
 
-* Ruby version
+```bash
+bundle install
+```
+Ejecuta las dependencias agregadas con Yarn
+```bash
+yarn install
+```
 
-* System dependencies
+## Uso
 
-* Configuration
+Para poder hacer uso de la aplicación se necesita agregar el API key de Coinmarketcap, tanto para el ambiente de desarrollo como el de pruebas.
 
-* Database creation
+En el archivo development.rb y el archivo test.rb agrega la variable de entornoCOINMARKET_KEY
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+ENV['COINMARKET_KEY'] = 'APIKEY'
+```
